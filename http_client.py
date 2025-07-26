@@ -6,7 +6,7 @@ class HttpClient:
     def __init__(self):
         self.session = aiohttp.ClientSession()
         self.cache = {}
-        self.host = "https://i-am-big-link.repl.it"
+        self.host = "https://flask-group-lesson.onrender.com/"
 
     async def get_rating(self) -> list[Rating] | None:
         async with self.session.get(f"{self.host}/get_rating") as response:
